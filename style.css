@@ -1,0 +1,170 @@
+/* Import Google Font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+:root {
+    --colorPrimario: #a3a8ab;
+    --font: #ffff;
+    --box: #1b1b1b;
+    --traducir: #1c80bb;
+}
+.backgraund {
+    background-image: url(https://w0.peakpx.com/wallpaper/640/708/HD-wallpaper-world-nations-colors-flags.jpg);
+    background-repeat: no-repeat;
+    opacity: 0.95;
+    background-size: cover;
+    background-position: center 50%;
+    
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+    min-height: 100vh;
+    background: var(--colorPrimario);
+}
+.container{
+    max-width: 690px;
+    width: 100%;
+    padding: 30px;
+    background:var(--colorPrimario);
+    border-radius: 7px;
+    box-shadow: 0 10px 20px var(--box);
+}
+.wrapper{
+    border-radius: 5px;
+    border: 1px solid var(--box);
+}
+.wrapper .text-input{
+    display: flex;
+    border-bottom: 1px solid var(--box);
+}
+.text-input .to-text{
+    border-radius: 0px;
+    border-left: 1px solid var(--box);
+}
+.text-input textarea{
+    height: 250px;
+    width: 100%;
+    border: none;
+    outline: none;
+    resize: none;
+    background: none;
+    font-size: 18px;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+.text-input textarea::placeholder{
+    color: var(--font);
+}
+.controls, li, .icons, .icons i{
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+}
+.controls{
+    list-style: none;
+    padding: 12px 15px;
+}
+.controls .row .icons{
+    width: 38%;
+}
+.controls .row .icons i{
+    width: 50px;
+    color: var(--box);
+    font-size: 14px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    justify-content: center;
+}
+.controls .row.from .icons{
+    padding-right: 15px;
+    border-right: 1px solid var(--box);
+}
+.controls .row.to .icons{
+    padding-left: 15px;
+    border-left: 1px solid var(--box);
+}
+.controls .row select{
+    color: var(--box);
+    border: none;
+    outline: none;
+    font-size: 18px;
+    background: none;
+    padding-left: 5px;
+}
+.text-input textarea::-webkit-scrollbar{
+    width: 4px;
+}
+.controls .row select::-webkit-scrollbar{
+    width: 8px;
+}
+
+.text-input textarea::-webkit-scrollbar-thumb{
+    background: var(--colorPrimario);
+    border-radius: 8px;
+}
+.controls .row select::-webkit-scrollbar-thumb{
+    background: var(--box);
+    border-radius: 8px;
+    border-right: 2px solid var(--box);
+}
+.controls .exchange{
+    color: var(--font);
+    cursor: pointer;
+    font-size: 16px;
+    transition: transform 0.2s ease;
+}
+.controls i:active{
+    transform: scale(0.9);
+}
+.container button{
+    width: 100%;
+    padding: 14px;
+    outline: none;
+    border: none;
+    color: var(--font);
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 17px;
+    border-radius: 5px;
+    background: var(--traducir);
+}
+
+@media (max-width: 660px){
+    .container{
+      padding: 20px;
+    }
+    .wrapper .text-input{
+      flex-direction: column;
+    }
+    .text-input .to-text{
+      border-left: 0px;
+      border-top: 1px solid var(--colorPrimario);
+    }
+    .text-input textarea{
+      height: 200px;
+    }
+    .controls .row .icons{
+      display: none;
+    }
+    .container button{
+      padding: 13px;
+      font-size: 16px;
+    }
+    .controls .row select{
+      font-size: 16px;
+    }
+    .controls .exchange{
+      font-size: 14px;
+    }  
+
+}
